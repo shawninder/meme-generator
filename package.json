@@ -1,0 +1,31 @@
+{
+  "name": "meme-generator",
+  "version": "0.0.1",
+  "description": "Generate simple sharable memes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawninder/meme-generator.git"
+  },
+  "keywords": [
+    "meme",
+    "generator"
+  ],
+  "author": "Shawn Inder <shawninder@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/shawninder/meme-generator/issues"
+  },
+  "homepage": "https://github.com/shawninder/meme-generator#readme",
+  "dependencies": {
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
