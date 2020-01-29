@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import qs from 'qs'
 import PreviewMeme from '../components/PreviewMeme'
 import PreviewFacebook from '../components/PreviewFacebook'
 import PreviewTwitter from '../components/PreviewTwitter'
-
 import withTargetValue from '../utils/withTargetValue'
-
-const defaultBgSize = 'cover'
+import defaultBgSize from '../values/defaultBgSize'
 
 export default () => {
   const [title, setTitle] = useState('')
@@ -16,10 +15,28 @@ export default () => {
   const [bottomText, setBottomText] = useState('')
   const [bgSize, setBgSize] = useState(defaultBgSize)
 
+  const outputUrl = useRef(null)
+
+  const data = {
+    title,
+    desc,
+    imgUrl,
+    topText,
+    bottomText,
+    bgSize
+  }
+
+  function copy () {
+    if (outputUrl) {
+      outputUrl.current.select()
+      document.execCommand('copy')
+    }
+  }
+
   return (
     <div>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <title>Meme Generator! | Greenpeace Canada</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/ico" href="https://ae8a5b8b62cadc45ea97-84cf25f002919c6ca2a9d2b70ee170e0.ssl.cf1.rackcdn.com/images/22205/5b9a84a5b5ae6.png" />
@@ -41,6 +58,13 @@ export default () => {
         bottomText={bottomText}
         bgSize={bgSize}
       />
+      <input
+        id="output-url"
+        ref={outputUrl}
+        type="text"
+        value={`http://localhost:3000/api/img?${qs.stringify(data)}`}
+      />
+      <button onClick={copy}>Copy</button>
       <PreviewFacebook
         title={title}
         desc={desc}
@@ -57,6 +81,13 @@ export default () => {
         bottomText={bottomText}
         bgSize={bgSize}
       />
+      <style jsx>
+        {`
+          #output-url {
+            width: 500px;
+          }
+        `}
+      </style>
     </div>
   )
 }
