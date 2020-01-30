@@ -12,8 +12,12 @@ export default function generateMeme (canvas, { imgUrl, topText, bottomText, bgS
   ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   function writeTexts () {
-    writeText(canvas, ctx, topText, 'top')
-    writeText(canvas, ctx, bottomText, 'bottom')
+    if (topText) {
+      writeText(canvas, ctx, topText, 'top')
+    }
+    if (bottomText) {
+      writeText(canvas, ctx, bottomText, 'bottom')
+    }
   }
   if (imgUrl) {
     loadImage(imgUrl).then((image) => {
