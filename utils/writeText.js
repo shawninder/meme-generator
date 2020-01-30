@@ -18,12 +18,14 @@ export default (canvas, ctx, text, position) => {
       textWidth = measured.width;
     }
   }
+  const xOffset = canvas.width / 2
+  const yOffset = position === 'top'
+    ? padding + measured.actualBoundingBoxAscent
+    : canvas.height - padding - measured.actualBoundingBoxDescent
   ctx.fillText(
     text,
-    canvas.width / 2,
-    position === 'top'
-      ? padding + (measured.actualBoundingBoxAscent - measured.actualBoundingBoxDescent)
-      : canvas.height - padding - (measured.actualBoundingBoxAscent - measured.actualBoundingBoxDescent),
+    xOffset,
+    yOffset,
     canvas.width
   );
 }
