@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/shawninder/meme-generator#readme",
   "dependencies": {
-    "canvas": "^2.6.1",
-    "next": "^9.2.1",
-    "qs": "^6.9.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "accept-language-parser": "1.5.0",
+    "canvas": "2.6.1",
+    "next": "9.2.1",
+    "qs": "6.9.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   }
 }
