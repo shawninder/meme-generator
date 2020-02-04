@@ -8,9 +8,6 @@ export default ({ title, desc, imgUrl, topText, bottomText }) => {
       <p className='text-bottom'>{bottomText}</p>
       <style>
         {`
-          .preview-facebook {
-
-          }
           .preview-facebook img {
             max-width: 600px;
           }
