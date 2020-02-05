@@ -62,6 +62,7 @@ const IndexPage = ({ query, headers }) => {
         ref={memeUrl}
         type="text"
         value={`http://localhost:3000/api/img?${qs.stringify(data)}`}
+        readOnly
       />
       <button onClick={copier(memeUrl)}>{strings.utils.copy}</button>
       <PreviewFacebook
