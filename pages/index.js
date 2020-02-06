@@ -10,6 +10,8 @@ import copier from '../utils/copier'
 import chooseLang from '../utils/chooseLang'
 import allStrings from '../values/strings'
 
+const isServer = typeof window === 'undefined'
+
 const IndexPage = ({ query, headers }) => {
   const lang = chooseLang(query.lang, headers['Accept-Language'], Object.keys(allStrings))
   const strings = allStrings[lang]
@@ -31,6 +33,10 @@ const IndexPage = ({ query, headers }) => {
     bgSize,
     lang
   }
+
+  const outputUrl = isServer
+    ? ''
+    : `${window.location.host}/api/img?${qs.stringify(data)}`
 
   return (
     <div>
@@ -61,7 +67,7 @@ const IndexPage = ({ query, headers }) => {
         id="output-url"
         ref={memeUrl}
         type="text"
-        value={`http://localhost:3000/api/img?${qs.stringify(data)}`}
+        value={outputUrl}
         readOnly
       />
       <button onClick={copier(memeUrl)}>{strings.utils.copy}</button>
