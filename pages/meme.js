@@ -25,7 +25,6 @@ const MemePage = ({ query, headers }) => {
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/ico" href="https://ae8a5b8b62cadc45ea97-84cf25f002919c6ca2a9d2b70ee170e0.ssl.cf1.rackcdn.com/images/22205/5b9a84a5b5ae6.png" />
-        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         <meta property="og:image" content={memeUrl} />
