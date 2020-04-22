@@ -1,6 +1,6 @@
 export default (canvas, ctx, text, position) => {
   let fontSize = 50
-  const fontFamily = 'Arial'
+  const fontFamily = 'Anton'
   const padding = 20
   ctx.font = `${fontSize}pt ${fontFamily}`
   ctx.strokeStyle = 'white'
