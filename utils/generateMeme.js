@@ -8,9 +8,9 @@ export default function generateMeme (canvas, { imgUrl, topText, bottomText, bgS
   canvas.width = 600
   canvas.height = 400
   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  ctx.beginPath();
-  ctx.fillStyle = 'black';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath()
+  ctx.fillStyle = 'black'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
   function writeTexts () {
     if (topText) {
       writeText(canvas, ctx, topText, 'top')

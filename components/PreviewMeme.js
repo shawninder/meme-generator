@@ -11,7 +11,7 @@ export default ({ imgUrl, topText, bottomText, bgSize }) => {
   }, [imgUrl, topText, bottomText, bgSize])
   return (
     <div className='preview-meme'>
-      <canvas id='meme' ref={canvas}></canvas>
+      <canvas id='meme' ref={canvas} />
       <style>
         {`
           .preview-meme img {

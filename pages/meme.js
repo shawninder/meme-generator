@@ -21,13 +21,13 @@ const MemePage = ({ query, headers }) => {
   return (
     <div>
       <Head>
-        <meta charSet="utf-8" />
+        <meta charSet='utf-8' />
         <title>{title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/ico" href="https://ae8a5b8b62cadc45ea97-84cf25f002919c6ca2a9d2b70ee170e0.ssl.cf1.rackcdn.com/images/22205/5b9a84a5b5ae6.png" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={desc} />
-        <meta property="og:image" content={memeUrl} />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='shortcut icon' type='image/ico' href='https://ae8a5b8b62cadc45ea97-84cf25f002919c6ca2a9d2b70ee170e0.ssl.cf1.rackcdn.com/images/22205/5b9a84a5b5ae6.png' />
+        <meta property='og:title' content={title} />
+        <meta property='og:description' content={desc} />
+        <meta property='og:image' content={memeUrl} />
       </Head>
       <h1>{title}</h1>
       <p>{desc}</p>
@@ -39,14 +39,14 @@ const MemePage = ({ query, headers }) => {
       />
       <h2>{strings.meme.share}</h2>
       <label>{strings.meme.url}</label>
-      <input id="memeUrlInput" ref="memeUrlInput" type="text" value={memeUrl} />
+      <input id='memeUrlInput' ref='memeUrlInput' type='text' value={memeUrl} />
       <a href={memeUrl}>{strings.meme.visit}</a>
       <button onClick={copier(memeUrlInput)}>{strings.utils.copy}</button>
       <a href={`https://www.facebook.com/sharer?u=${memeUrl}`}>{strings.sharing.facebook}</a>
       <a href={`https://twitter.com/tweet?text=${memeUrl}`}>{strings.sharing.twitter}</a>
       <a href={`mailto:?subject=${encoded.title}&body=${encoded.desc}%0A${memeUrl}`}>{strings.sharing.email}</a>
       <h3>{strings.meme.make}</h3>
-      <a href="/">{strings.meme.start}</a>
+      <a href='/'>{strings.meme.start}</a>
     </div>
   )
 }
