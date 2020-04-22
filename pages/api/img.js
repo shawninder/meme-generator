@@ -1,7 +1,7 @@
 import { registerFont, createCanvas } from 'canvas'
 import generateMeme from '../../utils/generateMeme'
 
-registerFont('./static/fonts/Anton/Anton-Regular.ttf', { family: 'Anton' })
+registerFont('./pages/fonts/Anton/Anton-Regular.ttf', { family: 'Anton' })
 
 export default function (req, res) {
   const { title, desc, imgUrl, topText, bottomText, bgSize } = req.query
