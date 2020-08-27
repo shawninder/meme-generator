@@ -1,4 +1,4 @@
-export default ({ title, desc, imgUrl, topText, bottomText }) => {
+export default function PreviewTwitter ({ title, desc, imgUrl, topText, bottomText }) {
   return (
     <div className='preview-twitter'>
       <h2>{title}</h2>

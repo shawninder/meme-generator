@@ -1,4 +1,4 @@
-export default ({ title, desc, imgUrl, topText, bottomText }) => {
+export default function PreviewFacebook ({ title, desc, imgUrl, topText, bottomText }) {
   return (
     <div className='preview-facebook'>
       <h2>{title}</h2>

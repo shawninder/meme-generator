@@ -1,4 +1,4 @@
-export default (canvas, ctx, text, position) => {
+export default function writeText (canvas, ctx, text, position) {
   let fontSize = 50
   const fontFamily = 'Anton'
   const padding = 20

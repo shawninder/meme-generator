@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import generateMeme from '../utils/generateMeme'
 
-export default ({ imgUrl, topText, bottomText, bgSize }) => {
+export default function PreviewMeme ({ imgUrl, topText, bottomText, bgSize }) {
   const canvas = useRef(null)
 
   useEffect(() => {
